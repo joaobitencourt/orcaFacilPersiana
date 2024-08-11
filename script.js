@@ -39,12 +39,3 @@ function freeQuote() {
         console.error("Elemento com ID 'nameTag' e 'measureValue' não encontrado.");
     }
 }
-
-
-
-/*         console.log(estimatedBudget);
-        // Receber a string
-        let a = localStorage.getItem('historico');
-        // transformar em objeto novamente
-        let b = JSON.parse(a);
-        console.log(b.nome); */

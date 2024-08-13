@@ -38,7 +38,7 @@ body{
     justify-content: center;
     justify-items: center;
     align-items: center;
-    grid-template-rows: 1fr 2fr auto;
+    grid-template-rows: auto 2fr auto;
 }  
 
 
@@ -49,6 +49,16 @@ main{
     flex-flow: row;
     align-items: center;
     justify-content: center;
+}
+
+header{
+    height: 30%;
+    width: 100%;
+    padding: 1.5rem;
+}
+
+header h1{
+    text-align: center;
 }
 
 .formOrcamento{

@@ -18,6 +18,21 @@
     </header>
     <main>
         <section class="formOrcamento"> 
+            <h3>Converter</h3>
+            <form class="row row-cols-lg-auto g-3 align-items-center">
+                <div class="form-floating mb-3 col-md-6">
+                    <input type="text" class="form-control" id="lengthMeters" placeholder="metros linear">
+                    <label for="nameTag">comprimento em metros</label>
+                </div>
+                <div class="form-floating mb-3 col-md-6">
+                    <input type="text" class="form-control" id="widthMeters" placeholder="10m²">
+                    <label for="measureValue">Largura em metros </label>
+                </div>
+                <div class="col-12">
+                    <section onclick="convert()" class="btn btn-success mb-3 col-12" id="submitButton">Converter</section>
+                </div>
+            </form>
+            <h3>Orçar</h3>
             <form class="row row-cols-lg-auto g-3 align-items-center">
                 <div class="form-floating mb-3 col-md-6">
                     <input type="text" class="form-control" id="nameTag" placeholder="Orçamento Sótão">
@@ -32,7 +47,7 @@
                 </div>
             </form>
     
-            <h1>Historico</h1>
+            <h1>Histórico</h1>
             <div id="historicalContainer">
             
             </div>

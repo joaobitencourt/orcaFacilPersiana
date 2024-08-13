@@ -1,3 +1,8 @@
+//converção
+let lengthMeters =  document.getElementById("lengthMeters");
+let widthMeters = document.getElementById("widthMeters");
+
+// orçamento
 let nameTag = document.getElementById("nameTag");
 let measureValue = document.getElementById("measureValue");
 
@@ -38,4 +43,53 @@ function freeQuote() {
     } else {
         console.error("Elemento com ID 'nameTag' e 'measureValue' não encontrado.");
     }
+}
+
+function convert(){
+    if (lengthMeters && widthMeters) {
+        
+        //catch vlaues 
+        let length = lengthMeters.value;
+        let width = widthMeters.value;
+
+       // Validar se os valores são números
+        if (isNaN(length) || isNaN(width)) {
+            alert("Entrada inválida: comprimento e largura devem ser números.");
+            return;
+        }
+
+        //converting
+        let convertMeters = ((length * width ));
+
+        measureValue.value = convertMeters; 
+
+        console.log(convertMeters);
+    }
+}
+
+function convertCMtoM(){
+
+    if (lengthMeters && widthMeters) {
+        
+        //catch vlaues 
+        let length = parseFloat(lengthMeters.value);
+        let width = parseFloat(widthMeters.value);
+
+        // Validar se os valores são números
+        if (isNaN(length) || isNaN(width)) {
+            alert("Entrada inválida: comprimento e largura devem ser números.");
+            return;
+        }
+
+        //converting
+        let convertMeters = ((length * width ));
+
+        // 
+        let  = widthMeters.value;
+
+        measureValue.value = convertMeters; 
+
+        console.log(convertMeters);
+    }
+
 }

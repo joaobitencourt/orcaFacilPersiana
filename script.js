@@ -12,9 +12,22 @@ function freeQuote() {
     if(nameTag && measureValue){
 
         //take value of input 
+        // Substitui a vírgula por um ponto para tratar decimais corretamente
         let value = nameTag.value;
-        let measureValueValue = measureValue.value;
+        let measureValueValue = parseFloat(measureValue.value.replace(',', '.'));
         
+        //validando se o campo só tem numeros
+        if(isNaN(measureValueValue)){
+            alert("Entrada inválida: o campo 'Tamahho em m²' só é permitido números ");
+            return;
+        }
+
+        //validação do campo nome se está vazio
+        if (value === null || value === undefined || value === '') {
+            alert("Entrada inválida: O campo nome deve ser preenchido.");
+            return;
+        }
+
         // medium price of one blind
         const defaultPricePerMeter = 230;
         
@@ -23,7 +36,6 @@ function freeQuote() {
             //catch the orcamento's values from localstorage 
             //string converted to object
             orcamentos = JSON.parse(localStorage.getItem("orcamentos"));
-
         }
         // add array item
         orcamentos.push({name: value, estimatedBudget})
@@ -49,8 +61,9 @@ function convert(){
     if (lengthMeters && widthMeters) {
         
         //catch vlaues 
-        let length = parseFloat(lengthMeters.value);
-        let width = parseFloat(widthMeters.value);
+        // Substitui a vírgula por um ponto para tratar decimais corretamente
+        let length = parseFloat(lengthMeters.value.replace(',', '.'));
+        let width = parseFloat(widthMeters.value.replace(',', '.'));
 
        // Validar se os valores são números
         if (isNaN(length) || isNaN(width)) {
@@ -67,7 +80,3 @@ function convert(){
     }
 }
 
-function convertCMtoM(){
-
-   
-}
